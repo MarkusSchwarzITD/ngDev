@@ -16,7 +16,7 @@ export class FirebaseAuthService {
 
   private Token: BehaviorSubject<string> = new BehaviorSubject<string>('');
 
-  public User: BehaviorSubject<firebase.User>;
+  public User: BehaviorSubject<firebase.User> = new BehaviorSubject(null);
 
   handleUserChanged() {
     this.fireAuth.authState.subscribe((u) => {
