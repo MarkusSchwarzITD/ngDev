@@ -9,6 +9,7 @@ import { MaterialModule } from '../../material.module';
 import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from 'src/environments/environment';
+import { loginData } from './mock.data';
 
 describe('firebase.auth.service', () => {
   let fbservice: FirebaseAuthService;
@@ -44,5 +45,7 @@ describe('firebase.auth.service', () => {
 
   it('registerUser', () => {});
 
-  it('logOn', () => {});
+  it('logOn', () => {
+    fbservice.logOn(loginData);
+  });
 });

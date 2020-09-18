@@ -52,7 +52,7 @@ export class FirebaseAuthService {
   registerUser(cred: LoginCredentials): Promise<firebase.auth.UserCredential> {
     return firebase
       .auth()
-      .setPersistence(firebase.auth.Auth.Persistence.SESSION)
+      .setPersistence(firebase.auth.Auth.Persistence.NONE)
       .then(() => {
         return this.fireAuth
           .createUserWithEmailAndPassword(cred.email, cred.password)
@@ -66,7 +66,7 @@ export class FirebaseAuthService {
   logOn(cred: LoginCredentials): Promise<firebase.auth.UserCredential> {
     return firebase
       .auth()
-      .setPersistence(firebase.auth.Auth.Persistence.SESSION)
+      .setPersistence(firebase.auth.Auth.Persistence.NONE)
       .then(() => {
         return this.fireAuth.signInWithEmailAndPassword(
           cred.email,
