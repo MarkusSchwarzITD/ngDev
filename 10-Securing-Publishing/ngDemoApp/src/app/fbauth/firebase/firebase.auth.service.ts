@@ -23,7 +23,7 @@ export class FirebaseAuthService {
       console.log('fbuser changed', u);
       this.User.next(u);
       this.User.pipe(
-        tap((u) => console.log('fbuser changed', u)),
+        tap((user) => console.log('fbuser changed', user)),
         mapTo((user) => {
           if (user != null) {
             (user as firebase.User).getIdToken().then((idToken: string) => {

@@ -13,7 +13,7 @@ import { environment } from 'src/environments/environment';
 describe('firebase.auth.service', () => {
   let fbservice: FirebaseAuthService;
   let controller: HttpTestingController;
-  let key = 'fbUser';
+  const key = 'fbUser';
 
   beforeEach(() => {
     TestBed.configureTestingModule({

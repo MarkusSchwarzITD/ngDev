@@ -1,8 +1,7 @@
 import { Component, OnInit } from '@angular/core';
-import { FormGroup, FormControl, Validators } from '@angular/forms';
-import { FirebaseAuthService } from '../../firebase.auth.service';
-import { LoginCredentials } from '../../credential.model';
+import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { SnackbarService } from '../../../../shared/snackbar/snackbar.service';
+import { FirebaseAuthService } from '../../firebase.auth.service';
 
 @Component({
   selector: 'app-login',
