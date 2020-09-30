@@ -16,11 +16,8 @@ import { SubsinkComponent } from './samples/subsink/subsink.component';
 import { UnsubscribingComponent } from './samples/unsubscribing/unsubscribing.component';
 import { VouchersService } from './samples/voucher.service';
 import { StatefulComponent } from './samples/stateful/stateful.component';
-import { SimpleDataStoreComponent } from './samples/simple-data-store/simple-data-store.component';
 import { EvtBusComponent } from './samples/evt-bus/evt-bus.component';
 import { VouchesContainerComponent } from './samples/ngrx-vouchers/vouches-container/vouches-container.component';
-import { VouchersListComponent } from './samples/simple-data-store/voucher-list/vouchers-list.component';
-import { KpiBarComponent } from './samples/simple-data-store/kpi-bar/kpi-bar.component';
 import { NgrxVouchersComponent } from './samples/ngrx-vouchers/voucher-list/ngrx-vouchers.component';
 import { VoucherEditComponent } from './samples/ngrx-vouchers/voucher-edit/voucher-edit.component';
 import { MarkdownEditorComponent } from './markdown-editor/markdown-editor.component';
@@ -29,6 +26,8 @@ import { demosFeatureKey, DemoReducer } from './store/reducers/demos.reducer';
 import { CreatingObservableComponent } from './samples/creating-observables/creating-observable.component';
 import { AsyncComponent } from './samples/async/async.component';
 import { SharedModule } from '../shared/shared.module';
+import { KpiComponent } from './samples/stateful/kpi/kpi.component';
+import { VoucherListComponent } from './samples/stateful/voucher-list/voucher-list.component';
 
 const demoRoutes: Routes = [
   {
@@ -45,7 +44,6 @@ const demoRoutes: Routes = [
       { path: 'subsink', component: SubsinkComponent },
       { path: 'streams', component: AsyncComponent },
       { path: 'stateful', component: StatefulComponent },
-      { path: 'simpleds', component: SimpleDataStoreComponent },
       { path: 'evtbus', component: EvtBusComponent },
       { path: 'ngrx', component: VouchesContainerComponent },
     ],
@@ -64,15 +62,14 @@ const demoRoutes: Routes = [
     SubsinkComponent,
     SubjectsComponent,
     StatefulComponent,
-    SimpleDataStoreComponent,
     EvtBusComponent,
     VouchesContainerComponent,
-    VouchersListComponent,
-    KpiBarComponent,
     NgrxVouchersComponent,
     VoucherEditComponent,
     MarkdownEditorComponent,
     AsyncComponent,
+    KpiComponent,
+    VoucherListComponent,
   ],
   imports: [
     CommonModule,

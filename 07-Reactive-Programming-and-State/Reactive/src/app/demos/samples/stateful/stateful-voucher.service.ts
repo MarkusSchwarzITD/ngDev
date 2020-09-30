@@ -13,27 +13,25 @@ import { lateVoucher } from '../late-voucher';
 export class StatefulVoucherService {
   constructor(private httpClient: HttpClient) {
     this.initData();
+    this.addLateVoucher();
   }
 
-  private vouchersArray: Voucher[] = [];
-  private vouchers: BehaviorSubject<Voucher[]> = new BehaviorSubject(
-    this.vouchersArray
-  );
+  private vouchers: BehaviorSubject<Voucher[]> = new BehaviorSubject([]);
 
   private initData() {
     this.httpClient
       .get<Voucher[]>(`${environment.apiUrl}`)
       .subscribe((data) => {
-        this.vouchersArray = data;
-        this.vouchers.next(this.vouchersArray);
+        this.vouchers.next(data);
       });
   }
 
   addLateVoucher() {
     setTimeout(() => {
-      this.vouchersArray.push(lateVoucher as Voucher);
-      this.vouchers.next(this.vouchersArray);
-    }, 8000);
+      const arr = this.vouchers.getValue();
+      arr.push(lateVoucher as Voucher);
+      this.vouchers.next(arr);
+    }, 4000);
   }
 
   getAllVouchers(): Observable<Voucher[]> {
@@ -45,8 +43,9 @@ export class StatefulVoucherService {
   }
 
   insertVoucher(v: Voucher): any {
-    this.vouchersArray.push(v);
-    this.vouchers.next(this.vouchersArray);
+    const arr = this.vouchers.getValue();
+    arr.push(lateVoucher as Voucher);
+    this.vouchers.next(arr);
   }
 
   updateVoucher(v: Voucher): any {}
