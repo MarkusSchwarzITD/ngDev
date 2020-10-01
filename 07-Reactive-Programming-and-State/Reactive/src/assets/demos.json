@@ -4,6 +4,19 @@
     "title": "Creating Observables"
   },
   {
+    "url": "unsubscribe",
+    "title": "Unsubscribing"
+  },
+  {
+    "url": "subsink",
+    "title": "SubSink"
+  },
+
+  {
+    "url": "streams",
+    "title": "Async Pipe"
+  },
+  {
     "url": "operators",
     "title": "Observable Operators"
   },
@@ -14,18 +27,6 @@
   {
     "url": "flexlayoutapi",
     "title": "Flex Layout Api"
-  },
-  {
-    "url": "unsubscribe",
-    "title": "Unsubscribing"
-  },
-  {
-    "url": "subsink",
-    "title": "SubSink"
-  },
-  {
-    "url": "streams",
-    "title": "Async Pipe"
   },
   {
     "url": "subjects",
