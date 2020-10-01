@@ -41,4 +41,8 @@ export class SubjectsComponent implements OnInit {
     this.bs$.subscribe((val) => console.log('Late Subscriber', val));
     this.bs$.next(20);
   }
+
+  logValue() {
+    console.log('Value of bs$', this.bs$.getValue());
+  }
 }
