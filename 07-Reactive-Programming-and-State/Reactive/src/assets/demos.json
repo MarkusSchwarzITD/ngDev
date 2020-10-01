@@ -4,6 +4,10 @@
     "title": "Creating Observables"
   },
   {
+    "url": "mousedomobs",
+    "title": "Mouse & DOM Events"
+  },
+  {
     "url": "unsubscribe",
     "title": "Unsubscribing"
   },
@@ -20,10 +24,7 @@
     "url": "operators",
     "title": "Observable Operators"
   },
-  {
-    "url": "mousedomobs",
-    "title": "Mouse & DOM Events"
-  },
+
   {
     "url": "flexlayoutapi",
     "title": "Flex Layout Api"
@@ -35,10 +36,6 @@
   {
     "url": "stateful",
     "title": "Stateful Service"
-  },
-  {
-    "url": "simpleds",
-    "title": "Two Subscribers"
   },
   { "url": "evtbus", "title": "Event Bus" },
   {
