@@ -151,5 +151,5 @@ Neue Themengebiete werden anhand von Folien und Demos erarbeitet. Am Ende der Mo
 - Securing Angular Routes using Route Guards
 - Using Interceptors to Automate Tokens
 - Preparing & Creating a Production Build
-- Hosting Option Overview (Webserver, Docker, …)
+- Hosting Option Overview (Docker, Firebase, Azure CDN, …)
 - Mastering Url Rewrite
